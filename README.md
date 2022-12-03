@@ -20,9 +20,9 @@ Aplikacja będzie dostępna poprzez GUI a także jako zdalne API dzięki czemu m
    
   * name – opcjonalna nazwa lokalizacji
    
-  * Pomieszczenie dodatkowo jest charakteryzowane przez:
+* Pomieszczenie dodatkowo jest charakteryzowane przez:
   
-* area = powierzchnia w m^2
+  * area = powierzchnia w m^2
    
   * cube = kubatura pomieszczenia w m^3
    
