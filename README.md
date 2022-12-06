@@ -1,6 +1,4 @@
-# Building Info
-
-![example workflow](https://github.com/Mational/BuildingInfoIO/actions/workflows/ci.yml/badge.svg)
+# Building Info ![example workflow](https://github.com/Mational/BuildingInfoIO/actions/workflows/ci.yml/badge.svg)
 
 ## Opis projektu
 
