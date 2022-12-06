@@ -9,7 +9,7 @@ public class BuildingManager {
         Room room1 = new Room("1.1.1", "pokój101", 14.2f, 28.4f, 13.2f, 15.0f);
         Room room2 = new Room("1.1.2", "pokój102", 15.2f, 20.4f, 14.2f, 16.0f);
         Room room3 = new Room("1.2.1", "pokój201", 12.2f, 24.4f, 10.2f, 15.3f);
-        Room room4 = new Room("1.2.2", "pokój202", 14.5f, 29.0f, 13.6f, 13.0f);
+        Room room4 = new Room("1.2.2", "pokój202", 14.7f, 29.0f, 13.6f, 13.0f);
 
         CompoundLocation level1 = new CompoundLocation("1.1", "piętro1");
         CompoundLocation level2 = new CompoundLocation("1.2", "piętro2");
