@@ -1,5 +1,7 @@
 # Building Info
 
+![example workflow](https://github.com/Mational/BuildingInfoIO/actions/workflows/ci.yml/badge.svg)
+
 ## Opis projektu
 
 ***Dla administratorów budynków, którzy pragną optymalizować koszty zarządzania budynkami
