@@ -14,7 +14,6 @@
     <bytecodeTargetLevel>
       <module name="building-info" target="19" />
       <module name="building-info-structure" target="19" />
-      <module name="io-project-architecture" target="11" />
       <module name="ioprojectarchitecture" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -22,7 +21,6 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="building-info" options="-parameters" />
       <module name="building-info-structure" options="-parameters" />
-      <module name="io-project-architecture" options="-parameters" />
       <module name="ioprojectarchitecture" options="-parameters" />
     </option>
   </component>
