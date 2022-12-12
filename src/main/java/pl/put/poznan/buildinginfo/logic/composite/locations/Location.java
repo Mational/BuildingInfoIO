@@ -7,4 +7,6 @@ public interface Location {
     float getCube();
     float getHeating();
     float getLight();
+    float getLightPerSquare();
+    float getHeatingPerCube();
 }

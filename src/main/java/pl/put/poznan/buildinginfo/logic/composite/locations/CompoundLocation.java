@@ -88,7 +88,12 @@ public class CompoundLocation extends BaseLocation {
             return 0;
         }
 
-        return getHeating()/getCube();
+        float hpc = 0.0f;
+        for(Location child : children) {
+            hpc += child.getHeatingPerCube();
+        }
+        hpc /= children.size();
+        return hpc;
     }
 
     public float getLightPerSquare() {
@@ -96,6 +101,11 @@ public class CompoundLocation extends BaseLocation {
             return 0;
         }
 
-        return getLight()/getArea();
+        float lps = 0.0f;
+        for(Location child:children) {
+            lps += child.getLightPerSquare();
+        }
+        lps /= children.size();
+        return lps;
     }
 }

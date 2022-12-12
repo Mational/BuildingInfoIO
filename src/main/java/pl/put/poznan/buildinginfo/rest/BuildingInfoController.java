@@ -31,7 +31,7 @@ public class BuildingInfoController {
     @RequestMapping(value="", method=RequestMethod.GET)
     public String getBuildingStructure() {
         try{
-            return buildingManager.getBuildingStructureCont();
+            return buildingManager.getBuildingStructure();
         }catch(NullPointerException e) {
             return "You don't create a building yet.";
         }

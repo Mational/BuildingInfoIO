@@ -33,4 +33,14 @@ public class Room extends BaseLocation {
     public float getLight() {
         return light;
     }
+
+    @Override
+    public float getLightPerSquare() {
+        return getLight()/getArea();
+    }
+
+    @Override
+    public float getHeatingPerCube() {
+        return getHeating()/getCube();
+    }
 }

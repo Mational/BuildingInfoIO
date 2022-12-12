@@ -37,4 +37,14 @@ abstract class BaseLocation implements Location {
     public float getLight() {
         return 0;
     }
+
+    @Override
+    public float getLightPerSquare() {
+        return 0;
+    }
+
+    @Override
+    public float getHeatingPerCube() {
+        return 0;
+    }
 }
