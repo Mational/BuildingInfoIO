@@ -13,6 +13,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * This class is necessary for managing building.
+ * This class is supposed to create the building structure from converted json.
+ * This class can also return any information about building such as their structure, floorInfo, etc.
+ * @author Mational, katrecat, figi14
+ * @version 1.0
+ */
 public class BuildingManager {
     private JsonNode result;
     private List<CompoundLocation> floors;
@@ -25,6 +32,11 @@ public class BuildingManager {
         this.rooms = null;
     }
 
+    /**
+     * This method is used for create building structure from JsonNode object
+     * This method returns nothing.
+     * @param jsonNode The input in JsonNode object form. It's just a mapped json with help of Jackson library
+     */
     public void createBuilding(JsonNode jsonNode) {
         building = new CompoundLocation(
                 String.valueOf(jsonNode.get("id")),
