@@ -18,11 +18,11 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
 
       - name: Generate JavaDoc
-        run: javadoc -d javadoc
+        run: mvn javadoc:javadoc
       
       - name: Commit JavaDoc
         run: |
-          git add javadoc
+          git add -A
           git config --local user.email "grzegorzmal40@gmail.com"
           git config --local user.name "Mational"
           git commit -m "Generated JavaDoc"
