@@ -1,3 +1,7 @@
-pl\put\poznan\buildinginfo\logic\TextTransformer.class
-pl\put\poznan\buildinginfo\app\TextTransformerApplication.class
-pl\put\poznan\buildinginfo\rest\TextTransformerController.class
+pl/put/poznan/buildinginfo/rest/BuildingInfoController.class
+pl/put/poznan/buildinginfo/logic/composite/locations/Location.class
+pl/put/poznan/buildinginfo/app/BuildingInfoApplication.class
+pl/put/poznan/buildinginfo/logic/composite/locations/Room.class
+pl/put/poznan/buildinginfo/logic/composite/locations/CompoundLocation.class
+pl/put/poznan/buildinginfo/logic/composite/owner/BuildingManager.class
+pl/put/poznan/buildinginfo/logic/composite/locations/BaseLocation.class
