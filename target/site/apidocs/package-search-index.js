@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"pl.put.poznan.buildinginfo.app"},{"l":"pl.put.poznan.buildinginfo.logic.composite.locations"},{"l":"pl.put.poznan.buildinginfo.logic.composite.owner"},{"l":"pl.put.poznan.buildinginfo.rest"}];updateSearchResults();
