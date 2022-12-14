@@ -23,7 +23,7 @@ jobs:
       - name: Upload Javadoc to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ deploy_keys.SECRET_SSH_KEY }}
+          deploy_key: ${{ secrets.SECRET_SSH_KEY }}
           publish_dir: ./target/site/apidocs
   
       - name: Send mail
