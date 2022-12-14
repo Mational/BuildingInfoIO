@@ -35,7 +35,7 @@ public class BuildingManager {
     /**
      * This method is used for create building structure from JsonNode object
      * This method returns nothing.
-     * @param jsonNode The input in JsonNode object form. It's just a mapped json with help of Jackson library
+     * @param jsonNode It is input parameter in JsonNode object form. It's just a mapped json with help of Jackson library
      */
     public void createBuilding(JsonNode jsonNode) {
         building = new CompoundLocation(
