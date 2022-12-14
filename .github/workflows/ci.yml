@@ -18,7 +18,7 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
 
       - name: Generate JavaDoc
-        run: javadoc -d javadoc *.java
+        run: mvn javadoc:javadoc
       
       - name: Commit JavaDoc
         run: |
