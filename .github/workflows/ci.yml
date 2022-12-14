@@ -17,6 +17,9 @@ jobs:
       - name: Validate, build and run tests
         run: mvn --batch-mode --update-snapshots verify
         
+      - name: Create documentation
+        run: mvn javadoc:javadoc
+        
       - name: Send mail
         if: failure()
         uses: dawidd6/action-send-mail@v2
