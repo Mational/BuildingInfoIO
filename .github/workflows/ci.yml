@@ -17,17 +17,14 @@ jobs:
       - name: Validate, build and run tests
         run: mvn --batch-mode --update-snapshots verify
         
-      - name: Create documentation
+      - name: Build and generate Javadoc documentation
         run: mvn clean javadoc:javadoc
         
-      - name: Commit changes
-        run: |
-          git add src/main/java
-          git commit -m "Updated documentation CI"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      - name: Upload Javadoc to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.SECRET_SSH_KEY }}
+          deploy_key: ${{ secrets.SECRET_SSH_KEY }}
+          publish_dir: ./target/site/apidocs
   
       - name: Send mail
         if: failure()
@@ -47,4 +44,3 @@ jobs:
           to: pro.computer1000@gmail.com,grzegorzmal40@gmail.com,katrecat33@gmail.com
           # from email name
           from: Github Action
-
