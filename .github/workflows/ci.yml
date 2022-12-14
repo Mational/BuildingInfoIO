@@ -19,8 +19,7 @@ jobs:
         
       - name: Create documentation
         run: mvn javadoc:javadoc
-      - uses: actions/upload-artifact@v2  
-        
+  
       - name: Send mail
         if: failure()
         uses: dawidd6/action-send-mail@v2
