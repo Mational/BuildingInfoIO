@@ -18,10 +18,16 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
         
       - name: Create documentation
-        run: mvn javadoc:javadoc
+        run: mvn clean javadoc:javadoc
         
-      - name: Push Javadoc
-        run: mvn site
+      - name: Commit changes
+        run: |
+          git add src/target
+          git commit -m "Updated documentation CI"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
   
       - name: Send mail
         if: failure()
