@@ -17,17 +17,18 @@ jobs:
       - name: Validate, build and run tests
         run: mvn --batch-mode --update-snapshots verify
 
-          - mvn javadoc:javadoc
-          - git config --global user.email "grzegorzmal40@gmail.com"
-          - git config --global user.name "Mational"
-          - git remote add gh-pages https://${GITHUB_TOKEN}@github.com/owner/repo.git
-          - git fetch gh-pages
-          - git checkout gh-pages
-          - git checkout master
-          - mv target/apidocs apidocs
-          - git add apidocs
-          - git commit -m "Update javadocs"
-          - git push gh-pages gh-pages
+      - name: Generate JavaDoc
+        run: javadoc -d javadoc *.java
+      
+      - name: Commit JavaDoc
+        run: |
+          git add javadoc
+          git config --local user.email "grzegorzmal40@gmail.com"
+          git config --local user.name "Mational"
+          git commit -m "Generated JavaDoc"
+          
+      - name: Push changes
+        run: git push
   
       - name: Send mail
         if: failure()
