@@ -19,6 +19,9 @@ jobs:
         
       - name: Create documentation
         run: mvn javadoc:javadoc
+        
+      - name: Push Javadoc
+        run: mvn site
   
       - name: Send mail
         if: failure()
