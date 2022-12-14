@@ -27,7 +27,7 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.TOKEN_SECRET }}
+          github_token: ${{ secrets.SECRET_SSH_KEY }}
   
       - name: Send mail
         if: failure()
