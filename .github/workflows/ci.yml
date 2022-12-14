@@ -16,15 +16,18 @@ jobs:
           cache: maven
       - name: Validate, build and run tests
         run: mvn --batch-mode --update-snapshots verify
-        
-      - name: Build and generate Javadoc documentation
-        run: mvn clean javadoc:javadoc
-        
-      - name: Upload Javadoc to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/site/apidocs
+
+          - mvn javadoc:javadoc
+          - git config --global user.email "grzegorzmal40@gmail.com"
+          - git config --global user.name "Mational"
+          - git remote add gh-pages https://${GITHUB_TOKEN}@github.com/owner/repo.git
+          - git fetch gh-pages
+          - git checkout gh-pages
+          - git checkout master
+          - mv target/apidocs apidocs
+          - git add apidocs
+          - git commit -m "Update javadocs"
+          - git push gh-pages gh-pages
   
       - name: Send mail
         if: failure()
