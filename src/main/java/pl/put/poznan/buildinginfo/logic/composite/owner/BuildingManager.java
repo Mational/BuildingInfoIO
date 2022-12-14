@@ -16,7 +16,7 @@ import java.util.Objects;
 /**
  * This class is necessary for managing building.
  * This class is supposed to create the building structure from converted json.
- * This class can also return any information about building such as their structure, floorInfo, etc.
+ * This class can also return any information about building such as their structure, floorInfo, roomInfo etc.
  * @author Mational, katrecat, figi14
  * @version 1.0
  */
