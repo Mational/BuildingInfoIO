@@ -1,11 +1,7 @@
 package pl.put.poznan.buildinginfo.logic.composite.owner;
 
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import pl.put.poznan.buildinginfo.logic.composite.locations.Room;
 import pl.put.poznan.buildinginfo.logic.composite.locations.CompoundLocation;
 
@@ -15,8 +11,8 @@ import java.util.Objects;
 
 /**
  * This class is necessary for managing building.
- * This class is supposed to create the building structure from converted json.
- * This class can also return any information about building such as their structure, floorInfo, roomInfo etc.
+ * This class is responsible for creating the building structure from converted json.
+     * This class can also return any information about building such as their structure, floorInfo, roomInfo etc.
  * @author Mational, katrecat, figi14
  * @version 1.0
  */
@@ -35,7 +31,7 @@ public class BuildingManager {
     /**
      * This method is used for create building structure from JsonNode object
      * This method returns nothing.
-     * @param jsonNode It is input parameter in JsonNode object form. It's just a mapped json with help of Jackson library
+     * @param jsonNode It is input parameter in JsonNode object form. This is json mapped using the Jackson library.
      */
     public void createBuilding(JsonNode jsonNode) {
         building = new CompoundLocation(
@@ -70,11 +66,22 @@ public class BuildingManager {
         result = jsonNode;
     }
 
+    /**
+     * This method returns the building structure in json
+     * @return Building structure in json format where the toPrettyString() method was used.
+     */
     public String getBuildingStructure() {
         return result.toPrettyString();
     }
 
-    public String getBuildingInfo(String option) throws JsonProcessingException {
+    /**
+     * This method is responsible for taking and returning specific building information.
+     * @param option This parameter defines what information about the building is to be retrieved and returned.
+     *               This parameter takes the following values: all, area, cube, heating, light, lps, hpc.
+     * @return This method returns information about the building in a string whose structure
+     *         corresponds to the json format.
+     */
+    public String getBuildingInfo(String option) {
         String jsonInString = "{\"id\":" + building.id + ","
                 + "\"name\":" + building.name + ",";
         switch(option) {
@@ -109,7 +116,14 @@ public class BuildingManager {
         return jsonInString;
     }
 
-    public String getFloorsInfo(String option) throws JsonProcessingException {
+    /**
+     * This method is responsible for taking and returning specific information for all floors.
+     * @param option This parameter defines what information about the floors is to be retrieved and returned.
+     *               This parameter takes the following values: all, area, cube, heating, light, lps, hpc.
+     * @return This method returns information about all building floors in a string whose structure
+     *         corresponds to the json format.
+     */
+    public String getFloorsInfo(String option) {
         String jsonInString = "[";
         for(CompoundLocation floor:floors) {
             jsonInString += "{\"id\":" + floor.id + ",";
@@ -151,7 +165,16 @@ public class BuildingManager {
         return jsonInString;
     }
 
-    public String getFloorInfo(String floor_name, String option) throws JsonProcessingException {
+    /**
+     * This method is responsible for taking and returning specific information for a specific building floor.
+     * @param floor_name This parameter defines which floor we want to obtain information about.
+     *                   This parameter takes the floor name.
+     * @param option This parameter defines what information about floor is to be retrieved and returned.
+     *               This parameter takes the following values: all, area, cube, heating, light, lps, hpc.
+     * @return This method returns information about specific building floor in a string whose structure
+     *         corresponds to the json format.
+     */
+    public String getFloorInfo(String floor_name, String option) {
         floor_name = "\"" + floor_name + "\"";
         for(int floor=0; floor<floors.size();floor++) {
             if (Objects.equals(floors.get(floor).name, floor_name)) {
@@ -192,7 +215,14 @@ public class BuildingManager {
         throw new IllegalArgumentException();
     }
 
-    public String getRoomsInfo(String option) throws JsonProcessingException {
+    /**
+     * This method is responsible for taking and returning specific information for all rooms in a building.
+     * @param option This parameter defines what information about rooms is to be retrieved and returned.
+     *               This parameter takes the following values: all, area, cube, heating, light, lps, hpc.
+     * @return This method returns information about all rooms in a building in a string whose structure
+     *         corresponds to the json format.
+     */
+    public String getRoomsInfo(String option) {
         String jsonInString = "[";
         for(Room room:rooms) {
             jsonInString += "{\"id\":" + room.id + ",";
@@ -236,7 +266,16 @@ public class BuildingManager {
         return  jsonInString;
     }
 
-    public String getRoomInfo(String room_name, String option) throws JsonProcessingException {
+    /**
+     * This method is responsible for taking and returning specific information about specific room in building.
+     * @param room_name This parameter defines which room we want to obtain information about.
+     *                  This parameter takes the room name.
+     * @param option This parameter defines what information about room is to be retrieved and returned.
+     *               This parameter takes the following values: all, area, cube, heating, light, lps, hpc.
+     * @return This method returns information about specific room in building in a string whose structure
+     *         corresponds to the json format.
+     */
+    public String getRoomInfo(String room_name, String option) {
         room_name = "\"" + room_name + "\"";
         for(int room=0; room<rooms.size();room++) {
             if (Objects.equals(rooms.get(room).name, room_name)) {

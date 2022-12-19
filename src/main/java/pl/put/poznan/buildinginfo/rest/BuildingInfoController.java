@@ -1,4 +1,5 @@
 package pl.put.poznan.buildinginfo.rest;
+
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.web.bind.annotation.*;
@@ -6,11 +7,22 @@ import com.fasterxml.jackson.databind.*;
 import org.springframework.web.client.HttpClientErrorException;
 import pl.put.poznan.buildinginfo.logic.composite.owner.BuildingManager;
 
+/**
+ * This class serves as the application's rest controller.
+ * It intercepts the relevant http requests and calls the corresponding methods.
+ */
 @RestController
 @RequestMapping("/BuildingInfoService")
 public class BuildingInfoController {
 
     private BuildingManager buildingManager;
+
+    /**
+     * This method responds to a POST request. Creates a building composite using a BuildingManager object.
+     * @param json This is a building structure in json format.
+     * @return This method returns a message depending on the composite build operation.
+     * @throws JsonProcessingException This exception is thrown when there is a problem with json processing.
+     */
     @RequestMapping(value="", method=RequestMethod.POST)
     public String createBuilding(@RequestBody String json) throws JsonProcessingException {
         if(buildingManager != null) {
@@ -28,6 +40,12 @@ public class BuildingInfoController {
             return "You gave invalid Json format.";
         }
     }
+
+    /**
+     * This method responds to a GET request. Using an object of the BuildingManager class,
+     * it returns the structure of the building in json format.
+     * @return json with the building structure, or an operation failure message.
+     */
     @RequestMapping(value="", method=RequestMethod.GET)
     public String getBuildingStructure() {
         try{
@@ -37,8 +55,17 @@ public class BuildingInfoController {
         }
     }
 
+    /**
+     * This method responds to a GET request. Using an object of the BuildingManager class,
+     * it returns relevant information about the building.
+     * @param option This parameter defines what information about the building is to be retrieved and returned.
+     *               This parameter takes the following values: all, area, cube, heating, light, lps, hpc.
+     * @return This method returns information about the building in the form of a string
+     *         whose structure corresponds to the json format if the operation is successful.
+     *         If the operation fails, the method returns an appropriate message.
+     */
     @RequestMapping(value="/{option}", method=RequestMethod.GET)
-    public String getBuildingInfo(@PathVariable String option) throws JsonProcessingException {
+    public String getBuildingInfo(@PathVariable String option) {
         try {
             return buildingManager.getBuildingInfo(option);
         }catch(NullPointerException e) {
@@ -50,8 +77,17 @@ public class BuildingInfoController {
         }
     }
 
+    /**
+     * This method responds to a GET request. Using an object of the BuildingManager class,
+     * it returns relevant information about all floors in building.
+     * @param option This parameter defines what information about the floors is to be retrieved and returned.
+     *               This parameter takes the following values: all, area, cube, heating, light, lps, hpc.
+     * @return This method returns information about all floors in building in the form of a string
+     *         whose structure corresponds to the json format if the operation is successful.
+     *         If the operation fails, the method returns an appropriate message.
+     */
     @RequestMapping(value="/floors/{option}", method=RequestMethod.GET)
-    public String getFloorsInfo(@PathVariable String option) throws JsonProcessingException {
+    public String getFloorsInfo(@PathVariable String option) {
         try {
             return buildingManager.getFloorsInfo(option);
         }catch(NullPointerException e) {
@@ -63,8 +99,19 @@ public class BuildingInfoController {
         }
     }
 
+    /**
+     * This method responds to a GET request. Using an object of the BuildingManager class,
+     * it returns relevant information about specific floor in building.
+     * @param floor_name This parameter defines which floor we want to obtain information about.
+     *                   This parameter takes the floor name.
+     * @param option This parameter defines what information about the floor is to be retrieved and returned.
+     *               This parameter takes the following values: all, area, cube, heating, light, lps, hpc.
+     * @return This method returns information about specific floor in building in the form of a string
+     *         whose structure corresponds to the json format if the operation is successful.
+     *         If the operation fails, the method returns an appropriate message.
+     */
     @RequestMapping(value="/floors/{floor_name}/{option}", method=RequestMethod.GET)
-    public String getFloorInfo(@PathVariable("floor_name") String floor_name, @PathVariable("option") String option) throws JsonProcessingException {
+    public String getFloorInfo(@PathVariable("floor_name") String floor_name, @PathVariable("option") String option) {
         try {
             return buildingManager.getFloorInfo(floor_name, option);
         }catch(NullPointerException e) {
@@ -76,8 +123,17 @@ public class BuildingInfoController {
         }
     }
 
+    /**
+     * This method responds to a GET request. Using an object of the BuildingManager class,
+     * it returns relevant information about all rooms in building.
+     * @param option This parameter defines what information about the rooms is to be retrieved and returned.
+     *               This parameter takes the following values: all, area, cube, heating, light, lps, hpc.
+     * @return This method returns information about all rooms in building in the form of a string
+     *         whose structure corresponds to the json format if the operation is successful.
+     *         If the operation fails, the method returns an appropriate message.
+     */
     @RequestMapping(value="/rooms/{option}", method=RequestMethod.GET)
-    public String getRoomsInfo(@PathVariable("option") String option) throws JsonProcessingException {
+    public String getRoomsInfo(@PathVariable("option") String option) {
         try {
             return buildingManager.getRoomsInfo(option);
         }catch(NullPointerException e) {
@@ -89,9 +145,20 @@ public class BuildingInfoController {
         }
     }
 
+    /**
+     * This method responds to a GET request. Using an object of the BuildingManager class,
+     * it returns relevant information about specific room in building.
+     * @param room_name This parameter defines which room we want to obtain information about.
+     *                  This parameter takes the room name.
+     * @param option This parameter defines what information about the room is to be retrieved and returned.
+     *               This parameter takes the following values: all, area, cube, heating, light, lps, hpc.
+     * @return This method returns information about specific room in building in the form of a string
+     *         whose structure corresponds to the json format if the operation is successful.
+     *         If the operation fails, the method returns an appropriate message.
+     */
     @RequestMapping(value="/rooms/{room_name}/{option}", method=RequestMethod.GET)
     public String getRoomInfo(@PathVariable("room_name") String room_name,
-                                @PathVariable("option") String option) throws JsonProcessingException {
+                                @PathVariable("option") String option) {
         try {
             return buildingManager.getRoomInfo(room_name, option);
         }catch(NullPointerException e) {
