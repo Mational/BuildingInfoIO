@@ -11,7 +11,7 @@
 '/home/runner/work/BuildingInfoIO/BuildingInfoIO/src/main/java'
 -author
 -bottom
-'Copyright &#169; 2022. All rights reserved.'
+'Copyright &#169; 2023. All rights reserved.'
 -charset
 'UTF-8'
 -d
@@ -24,62 +24,62 @@
 -version
 -windowtitle
 'building-info 0.5 API'
-pl.put.poznan.buildinginfo.rest
 pl.put.poznan.buildinginfo.app
-pl.put.poznan.buildinginfo.logic.composite.locations
+pl.put.poznan.buildinginfo.rest
 pl.put.poznan.buildinginfo.logic.composite.owner
-/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar = 1670348004315
-/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar = 1670348004291
-/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar = 1670348004315
-/home/runner/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.0.0/spring-boot-starter-web-3.0.0.jar = 1670348002739
-/home/runner/.m2/repository/org/springframework/boot/spring-boot-starter/3.0.0/spring-boot-starter-3.0.0.jar = 1670348002843
-/home/runner/.m2/repository/org/springframework/boot/spring-boot/3.0.0/spring-boot-3.0.0.jar = 1670348003119
-/home/runner/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.0.0/spring-boot-autoconfigure-3.0.0.jar = 1670348003131
-/home/runner/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.0.0/spring-boot-starter-logging-3.0.0.jar = 1670348002847
-/home/runner/.m2/repository/ch/qos/logback/logback-classic/1.4.5/logback-classic-1.4.5.jar = 1670348004215
-/home/runner/.m2/repository/ch/qos/logback/logback-core/1.4.5/logback-core-1.4.5.jar = 1670348004279
-/home/runner/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.19.0/log4j-to-slf4j-2.19.0.jar = 1670348004247
-/home/runner/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar = 1670348004271
-/home/runner/.m2/repository/org/slf4j/jul-to-slf4j/2.0.4/jul-to-slf4j-2.0.4.jar = 1670348004231
-/home/runner/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar = 1670348004243
-/home/runner/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar = 1670348004303
-/home/runner/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.0.0/spring-boot-starter-json-3.0.0.jar = 1670348003007
-/home/runner/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.14.1/jackson-datatype-jdk8-2.14.1.jar = 1670348004319
-/home/runner/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.14.1/jackson-datatype-jsr310-2.14.1.jar = 1670348004335
-/home/runner/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.14.1/jackson-module-parameter-names-2.14.1.jar = 1670348004335
-/home/runner/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.0.0/spring-boot-starter-tomcat-3.0.0.jar = 1670348003155
-/home/runner/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.1/tomcat-embed-core-10.1.1.jar = 1670348004387
-/home/runner/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.1/tomcat-embed-el-10.1.1.jar = 1670348004375
-/home/runner/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.1/tomcat-embed-websocket-10.1.1.jar = 1670348004355
-/home/runner/.m2/repository/org/springframework/spring-web/6.0.2/spring-web-6.0.2.jar = 1670348003399
-/home/runner/.m2/repository/org/springframework/spring-beans/6.0.2/spring-beans-6.0.2.jar = 1670348003351
-/home/runner/.m2/repository/io/micrometer/micrometer-observation/1.10.2/micrometer-observation-1.10.2.jar = 1670348003343
-/home/runner/.m2/repository/io/micrometer/micrometer-commons/1.10.2/micrometer-commons-1.10.2.jar = 1670348003327
-/home/runner/.m2/repository/org/springframework/spring-webmvc/6.0.2/spring-webmvc-6.0.2.jar = 1670348003499
-/home/runner/.m2/repository/org/springframework/spring-aop/6.0.2/spring-aop-6.0.2.jar = 1670348003519
-/home/runner/.m2/repository/org/springframework/spring-context/6.0.2/spring-context-6.0.2.jar = 1670348003615
-/home/runner/.m2/repository/org/springframework/spring-expression/6.0.2/spring-expression-6.0.2.jar = 1670348003503
-/home/runner/.m2/repository/org/springframework/spring-core/6.0.2/spring-core-6.0.2.jar = 1670348004055
-/home/runner/.m2/repository/org/springframework/spring-jcl/6.0.2/spring-jcl-6.0.2.jar = 1670348003875
-/home/runner/.m2/repository/org/slf4j/slf4j-api/2.0.4/slf4j-api-2.0.4.jar = 1670348004595
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/src/main/java = 1671486280503
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/jquery-ui.overrides.css = 1671486297539
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/element-list = 1671486297403
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/overview-summary.html = 1671486297531
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/script.js = 1671486297535
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/search-page.js = 1671486297539
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/search.html = 1671486297527
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/type-search-index.js = 1671486297487
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/tag-search-index.js = 1671486297487
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/module-search-index.js = 1671486297483
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/help-doc.html = 1671486297531
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/allpackages-index.html = 1671486297483
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/index.html = 1671486297463
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/index-all.html = 1671486297527
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/search.js = 1671486297535
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/stylesheet.css = 1671486297535
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/copy.svg = 1671486297535
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/member-search-index.js = 1671486297487
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/overview-tree.html = 1671486297459
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/allclasses-index.html = 1671486297483
-/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/package-search-index.js = 1671486297487
+pl.put.poznan.buildinginfo.logic.composite.locations
+/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar = 1673887600866
+/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar = 1673887600790
+/home/runner/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar = 1673887600802
+/home/runner/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.0.0/spring-boot-starter-web-3.0.0.jar = 1673887600074
+/home/runner/.m2/repository/org/springframework/boot/spring-boot-starter/3.0.0/spring-boot-starter-3.0.0.jar = 1673887600114
+/home/runner/.m2/repository/org/springframework/boot/spring-boot/3.0.0/spring-boot-3.0.0.jar = 1673887600322
+/home/runner/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.0.0/spring-boot-autoconfigure-3.0.0.jar = 1673887600318
+/home/runner/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.0.0/spring-boot-starter-logging-3.0.0.jar = 1673887600098
+/home/runner/.m2/repository/ch/qos/logback/logback-classic/1.4.5/logback-classic-1.4.5.jar = 1673887600826
+/home/runner/.m2/repository/ch/qos/logback/logback-core/1.4.5/logback-core-1.4.5.jar = 1673887600850
+/home/runner/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.19.0/log4j-to-slf4j-2.19.0.jar = 1673887600798
+/home/runner/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar = 1673887600814
+/home/runner/.m2/repository/org/slf4j/jul-to-slf4j/2.0.4/jul-to-slf4j-2.0.4.jar = 1673887600834
+/home/runner/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar = 1673887600830
+/home/runner/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar = 1673887600846
+/home/runner/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.0.0/spring-boot-starter-json-3.0.0.jar = 1673887600142
+/home/runner/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.14.1/jackson-datatype-jdk8-2.14.1.jar = 1673887600846
+/home/runner/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.14.1/jackson-datatype-jsr310-2.14.1.jar = 1673887600846
+/home/runner/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.14.1/jackson-module-parameter-names-2.14.1.jar = 1673887600858
+/home/runner/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.0.0/spring-boot-starter-tomcat-3.0.0.jar = 1673887600162
+/home/runner/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.1/tomcat-embed-core-10.1.1.jar = 1673887601074
+/home/runner/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.1/tomcat-embed-el-10.1.1.jar = 1673887600878
+/home/runner/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.1/tomcat-embed-websocket-10.1.1.jar = 1673887600890
+/home/runner/.m2/repository/org/springframework/spring-web/6.0.2/spring-web-6.0.2.jar = 1673887600490
+/home/runner/.m2/repository/org/springframework/spring-beans/6.0.2/spring-beans-6.0.2.jar = 1673887600350
+/home/runner/.m2/repository/io/micrometer/micrometer-observation/1.10.2/micrometer-observation-1.10.2.jar = 1673887600194
+/home/runner/.m2/repository/io/micrometer/micrometer-commons/1.10.2/micrometer-commons-1.10.2.jar = 1673887600218
+/home/runner/.m2/repository/org/springframework/spring-webmvc/6.0.2/spring-webmvc-6.0.2.jar = 1673887600394
+/home/runner/.m2/repository/org/springframework/spring-aop/6.0.2/spring-aop-6.0.2.jar = 1673887600414
+/home/runner/.m2/repository/org/springframework/spring-context/6.0.2/spring-context-6.0.2.jar = 1673887600498
+/home/runner/.m2/repository/org/springframework/spring-expression/6.0.2/spring-expression-6.0.2.jar = 1673887600462
+/home/runner/.m2/repository/org/springframework/spring-core/6.0.2/spring-core-6.0.2.jar = 1673887600726
+/home/runner/.m2/repository/org/springframework/spring-jcl/6.0.2/spring-jcl-6.0.2.jar = 1673887600578
+/home/runner/.m2/repository/org/slf4j/slf4j-api/2.0.4/slf4j-api-2.0.4.jar = 1673887601062
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/src/main/java = 1673887583554
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/stylesheet.css = 1673887620198
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/search.js = 1673887620202
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/overview-tree.html = 1673887620130
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/search-page.js = 1673887620202
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/tag-search-index.js = 1673887620166
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/overview-summary.html = 1673887620194
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/allclasses-index.html = 1673887620158
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/package-search-index.js = 1673887620162
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/type-search-index.js = 1673887620162
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/element-list = 1673887620062
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/jquery-ui.overrides.css = 1673887620206
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/module-search-index.js = 1673887620162
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/search.html = 1673887620190
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/allpackages-index.html = 1673887620162
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/script.js = 1673887620198
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/copy.svg = 1673887620202
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/index.html = 1673887620134
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/help-doc.html = 1673887620198
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/index-all.html = 1673887620190
+/home/runner/work/BuildingInfoIO/BuildingInfoIO/target/site/apidocs/member-search-index.js = 1673887620162
