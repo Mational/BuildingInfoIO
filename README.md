@@ -33,56 +33,57 @@ Aplikacja będzie dostępna poprzez GUI a także jako zdalne API dzięki czemu m
 ## Przykładowe wejście w formacie JSON
 
 ```json
-{
-  "id": "1",
-  "name": "building",
-  "levels": [
-    {
-      "id": "1.1",
-      "name": "floor1",
-      "rooms": [
-        {
-          "id": "1.1.1",
-          "name": "room101",
-          "area": 14.2,
-          "cube": 28.4,
-          "heating": 13.2,
-          "light": 15
-        },
-        {
-          "id": "1.1.2",
-          "name": "room102",
-          "area": 15.2,
-          "cube": 30.4,
-          "heating": 14.2,
-          "light": 16
-        }
-      ]
-    },
-    {
-      "id": "1.2",
-      "name": "floor2",
-      "rooms": [
-        {
-          "id": "1.2.1",
-          "name": "room201",
-          "area": 14.5,
-          "cube": 29,
-          "heating": 13.6,
-          "light": 15.3
-        },
-        {
-          "id": "1.2.2",
-          "name": "room202",
-          "area": 12.2,
-          "cube": 24.4,
-          "heating": 10.2,
-          "light": 13
-        }
-      ]
-    }
-  ]
-}
+[
+ {"min": "15.0"},
+	{"max": "12.2"},
+	{
+		"id": "1",
+		"name": "building",
+		"levels": [{
+				"id": "1.1",
+				"name": "floor1",
+				"rooms": [{
+						"id": "1.1.1",
+						"name": "room101",
+						"area": 14.2,
+						"cube": 28.4,
+						"heating": 13.2,
+						"light": 15
+					},
+					{
+						"id": "1.1.2",
+						"name": "room102",
+						"area": 15.2,
+						"cube": 30.4,
+						"heating": 14.2,
+						"light": 16
+					}
+				]
+			},
+			{
+				"id": "1.2",
+				"name": "floor2",
+				"rooms": [{
+						"id": "1.2.1",
+						"name": "room201",
+						"area": 14.5,
+						"cube": 29,
+						"heating": 13.6,
+						"light": 15.3
+					},
+					{
+						"id": "1.2.2",
+						"name": "room202",
+						"area": 12.2,
+						"cube": 24.4,
+						"heating": 10.2,
+						"light": 13
+					}
+				]
+			}
+		]
+	}
+]
 ```
 
 ## Ścieżki i metody obsługiwane przez REST
