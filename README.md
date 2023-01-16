@@ -34,7 +34,7 @@ Aplikacja będzie dostępna poprzez GUI a także jako zdalne API dzięki czemu m
 
 ```json
 [
- {"min": "15.0"},
+ 	{"min": "15.0"},
 	{"max": "12.2"},
 	{
 		"id": "1",
