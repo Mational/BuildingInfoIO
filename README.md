@@ -100,3 +100,12 @@ Aplikacja będzie dostępna poprzez GUI a także jako zdalne API dzięki czemu m
 **{option}** - wartość ze zbioru {"all", "area", "cube", "light", "heating", "lps", "hpc"}  
 **{floor_name}** - nazwa piętra wzięta z atrybutu "name" z json'a  
 **{room_name}** - nazwa pokoju wzięta z atrybutu "name" z json'a
+
+## Akcje naprawcze po pierwszym Sprintem #1
+
+* Co poprawić ?
+  * lepszy podział obowiązków w projekcie
+* Co wprowadzić ?
+  * spotkania poza projektowe
+* Co usunąć ?
+  * rozmowy na niepowiązane tematy podczas pracy
