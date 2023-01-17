@@ -34,8 +34,8 @@ Aplikacja będzie dostępna poprzez GUI a także jako zdalne API dzięki czemu m
 
 ```json
 [
- 	{"min": "15.0"},
-	{"max": "12.2"},
+    {"lowLight": 1.056},
+    {"highHeat": 0.4671},
 	{
 		"id": "1",
 		"name": "building",
