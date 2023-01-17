@@ -14,9 +14,9 @@ Aplikacja będzie dostępna poprzez GUI a także jako zdalne API dzięki czemu m
 
 * Pierwsze dwa obiekty w liście to kolejno:
   
-  * parametr minimalnej dozwolonej mocy oświetlenia / m^2
+  * parametr minimalnej dozwolonej mocy oświetlenia / m^2 w pokoju
   
-  * parametr maksymalnego dozwolonego poziomu zużycia energii / m^3
+  * parametr maksymalnego dozwolonego poziomu zużycia energii / m^3 w pokoju
   
 * Ostatni obiekt to struktura budynku na, której będzie działał program
 
@@ -107,13 +107,14 @@ Aplikacja będzie dostępna poprzez GUI a także jako zdalne API dzięki czemu m
   * **BuildingInfoService/floors/{floor_name}/{option}** - pokazuje informacje o danym piętrze w formacie json
   * **BuildingInfoService/rooms/{option}** - pokazuje informacje o wszystkich pokojach w budynku w formacie json
   * **BuildingInfoService/rooms/{room_name}/{option}** - pokazuje informacje o danym pokoju w formacie json
-  * **BuildingInfoService/rooms/lightLimit** - pokazuje informacje o budynkach poniżej minimalnego limitu mocy oświetlenia / m^2
+  * **BuildingInfoService/rooms/lightLimit** - pokazuje informacje o pokojach poniżej minimalnego limitu mocy oświetlenia / m^2
+  * **BuildingInfoService/rooms/heatLimit** - pokazuje informacje o pokojach powyżej dozwolonego poziomu zużycia energii / m^3
 
 **{option}** - wartość ze zbioru {"all", "area", "cube", "light", "heating", "lps", "hpc"}  
 **{floor_name}** - nazwa piętra wzięta z atrybutu "name" z json'a  
 **{room_name}** - nazwa pokoju wzięta z atrybutu "name" z json'a
 
-## Akcje naprawcze po pierwszym Sprintem #1
+## Akcje naprawcze po pierwszym Sprintcie #1
 
 * Co poprawić ?
   * lepszy podział obowiązków w projekcie
