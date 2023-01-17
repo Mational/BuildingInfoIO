@@ -198,6 +198,17 @@ public class BuildingInfoController {
             return "Bad Request.";
         }
     }
+    
+    @RequestMapping(value="/rooms/heatLimit", method=RequestMethod.GET)
+    public String getRoomsOverHeatLimit() {
+        try {
+            return buildingManager.getRoomsOverHeatLimit(heatParameter);
+        }catch(NullPointerException e) {
+            return "You don't create a building yet.";
+        }catch(HttpClientErrorException.BadRequest e) {
+            return "Bad Request.";
+        }
+    }
 }
 
 
