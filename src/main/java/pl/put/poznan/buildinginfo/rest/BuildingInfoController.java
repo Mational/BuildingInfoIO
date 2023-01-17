@@ -16,6 +16,8 @@ import pl.put.poznan.buildinginfo.logic.composite.owner.BuildingManager;
 public class BuildingInfoController {
 
     private BuildingManager buildingManager;
+    private float lightParameter;
+    private float heatParameter;
 
     /**
      * This method responds to a POST request. Creates a building composite using a BuildingManager object.
@@ -34,10 +36,26 @@ public class BuildingInfoController {
             buildingManager = new BuildingManager();
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode jsonNode = objectMapper.readTree(json);
-            buildingManager.createBuilding(jsonNode);
+            lightParameter = jsonNode.get(0).get("lowLight").floatValue();
+            heatParameter = jsonNode.get(1).get("highHeat").floatValue();
+
+            if(lightParameter < 0 || heatParameter < 0) {
+                return "At least one parameter is negative which is not allowed";
+            }
+
+            System.out.println("Light: "+lightParameter);
+            System.out.println("High: "+heatParameter);
+
+            //Dodać nazwy dla parametrów w jsonie i zczytac je do wartosci w BuildingInfoController
+            //System.out.println("Lightning level: "+jsonNode.get(0).get);
+            JsonNode jsonP2 = jsonNode.get(1);
+            System.out.println("test: "+jsonNode.elements());
+            buildingManager.createBuilding(jsonNode.get(2));
             return "Json has been loaded to composite.";
         }catch(JsonParseException jpe) {
             return "You gave invalid Json format.";
+        }catch(NullPointerException npe) {
+            return "You didn't give all of the parameters in json file";
         }
     }
 
@@ -165,6 +183,17 @@ public class BuildingInfoController {
             return "You don't create a building yet.";
         }catch(IllegalArgumentException e) {
             return "Incorrect argument was sended.";
+        }catch(HttpClientErrorException.BadRequest e) {
+            return "Bad Request.";
+        }
+    }
+
+    @RequestMapping(value="/rooms/lightLimit", method=RequestMethod.GET)
+    public String getRoomsUnderLitghtLimit() {
+        try {
+            return buildingManager.getRoomsUnderLightLimit(lightParameter);
+        }catch(NullPointerException e) {
+            return "You don't create a building yet.";
         }catch(HttpClientErrorException.BadRequest e) {
             return "Bad Request.";
         }
