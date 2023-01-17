@@ -338,4 +338,27 @@ public class BuildingManager {
         System.out.println(jsonInString);
         return  jsonInString;
     }
+    
+    public String getRoomsOverHeatLimit(Float limit) {
+        String jsonInString = "[";
+        for(Room room:rooms) {
+            if(room.getHeatingPerCube() > limit || limit == 0.0) {
+                if (jsonInString.charAt(jsonInString.length()-1) == '}'){
+                    jsonInString += ",";
+                }
+                jsonInString += "{\"id\":" + room.id + ",";
+                jsonInString += "\"name\":" + room.name + ",";
+                jsonInString += "\"area\":" + room.getArea() + ",";
+                jsonInString += "\"cube\":" + room.getCube() + ",";
+                jsonInString += "\"heating\":" + room.getHeating() + ",";
+                jsonInString += "\"light\":" + room.getLight() + ",";
+                jsonInString += "\"lightPerSquare\":" + room.getLightPerSquare() + ",";
+                jsonInString += "\"heatingPerCube\":" + room.getHeatingPerCube() + "}";
+            }
+        }
+
+        jsonInString += "]";
+        System.out.println(jsonInString);
+        return  jsonInString;
+    }
 }
