@@ -10,6 +10,16 @@ Aplikacja będzie dostępna poprzez GUI a także jako zdalne API dzięki czemu m
 
 ## Struktura danych:
 
+* Dane mają postać 3-elementowej listy w formacie json
+
+* Pierwsze dwa obiekty w liście to kolejno:
+  
+  * parametr minimalnej dozwolonej mocy oświetlenia / m^2
+  
+  * parametr maksymalnego dozwolonego poziomu zużycia energii / m^3
+  
+* Ostatni obiekt to struktura budynku na, której będzie działał program
+
 * Lokacja to budynek, poziom, lub pomieszczenie
 
 * Budynek może składać się z poziomów a te z pomieszczeń
@@ -97,6 +107,7 @@ Aplikacja będzie dostępna poprzez GUI a także jako zdalne API dzięki czemu m
   * **BuildingInfoService/floors/{floor_name}/{option}** - pokazuje informacje o danym piętrze w formacie json
   * **BuildingInfoService/rooms/{option}** - pokazuje informacje o wszystkich pokojach w budynku w formacie json
   * **BuildingInfoService/rooms/{room_name}/{option}** - pokazuje informacje o danym pokoju w formacie json
+  * **BuildingInfoService/rooms/lightLimit** - pokazuje informacje o budynkach poniżej minimalnego limitu mocy oświetlenia / m^2
 
 **{option}** - wartość ze zbioru {"all", "area", "cube", "light", "heating", "lps", "hpc"}  
 **{floor_name}** - nazwa piętra wzięta z atrybutu "name" z json'a  
