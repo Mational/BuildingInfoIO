@@ -23,10 +23,9 @@ public class BuildingInfoController {
      * This method responds to a POST request. Creates a building composite using a BuildingManager object.
      * @param json This is a building structure in json format.
      * @return This method returns a message depending on the composite build operation.
-     * @throws JsonProcessingException This exception is thrown when there is a problem with json processing.
      */
     @RequestMapping(value="", method=RequestMethod.POST)
-    public String createBuilding(@RequestBody String json) throws JsonProcessingException {
+    public String createBuilding(@RequestBody String json) {
         if(buildingManager != null) {
             System.out.println("Composite is full, space will be cleared.\n");
             buildingManager = null;
@@ -56,6 +55,8 @@ public class BuildingInfoController {
             return "You gave invalid Json format.";
         }catch(NullPointerException npe) {
             return "You didn't give all of the parameters in json file";
+        }catch(JsonProcessingException jpe) {
+            return "Core dump!";
         }
     }
 
