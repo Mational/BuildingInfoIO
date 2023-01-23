@@ -188,14 +188,14 @@ class BuildingInfoControllerTest {
                 ]
                 """;
         assertEquals("You didn't give all of the parameters in json file", buildingInfoController.createBuilding(json),
-                "Cheking of all parameters works properly.");
+                "Checking of all parameters works properly.");
     }
 
     @Test
-    void testInvalid() {
+    void testConstrains() {
         String json = """
                 [
-                    {"lowLight": 1.056},
+                    {"lowLight": -1.056},
                     {"highHeat": 0.4671},
                 	{
                 		"id": "1",
@@ -206,7 +206,7 @@ class BuildingInfoControllerTest {
                 				"rooms": [{
                 						"id": "1.1.1",
                 						"name": "room101",
-                						"area": 14.2,
+                						"area": -14.2,
                 						"cube": 28.4,
                 						"heating": 13.2,
                 						"light": 15
@@ -246,7 +246,241 @@ class BuildingInfoControllerTest {
                 	}
                 ]
                 """;
-		assertEquals("Core dump!", buildingInfoController.createBuilding(json),
-                "Cheking works properly.");
+        assertEquals("At least one parameter is negative which is not allowed", buildingInfoController.createBuilding(json),
+                "Checking not positive parameters works properly.");
+    }
+    @Test
+    void testNotPositiveArea() {
+        String json = """
+                [
+                    {"lowLight": 1.056},
+                    {"highHeat": 0.4671},
+                	{
+                		"id": "1",
+                		"name": "building",
+                		"levels": [{
+                				"id": "1.1",
+                				"name": "floor1",
+                				"rooms": [{
+                						"id": "1.1.1",
+                						"name": "room101",
+                						"area": -14.2,
+                						"cube": 28.4,
+                						"heating": 13.2,
+                						"light": 15
+                					},
+                					{
+                						"id": "1.1.2",
+                						"name": "room102",
+                						"area": 15.2,
+                						"cube": 30.4,
+                						"heating": 14.2,
+                						"light": 16
+                					}
+                				]
+                			},
+                			{
+                				"id": "1.2",
+                				"name": "floor2",
+                				"rooms": [{
+                						"id": "1.2.1",
+                						"name": "room201",
+                						"area": 14.5,
+                						"cube": 29,
+                						"heating": 13.6,
+                						"light": 15.3
+                					},
+                					{
+                						"id": "1.2.2",
+                						"name": "room202",
+                						"area": 12.2,
+                						"cube": 24.4,
+                						"heating": 10.2,
+                						"light": 13
+                					}
+                				]
+                			}
+                		]
+                	}
+                ]
+                """;
+        assertEquals("One of room parameters is non positive.", buildingInfoController.createBuilding(json),
+                "Light per square works properly.");
+    }
+
+    @Test
+    void testNotPositiveCube() {
+        String json = """
+                [
+                    {"lowLight": 1.056},
+                    {"highHeat": 0.4671},
+                	{
+                		"id": "1",
+                		"name": "building",
+                		"levels": [{
+                				"id": "1.1",
+                				"name": "floor1",
+                				"rooms": [{
+                						"id": "1.1.1",
+                						"name": "room101",
+                						"area": 14.2,
+                						"cube": -28.4,
+                						"heating": 13.2,
+                						"light": 15
+                					},
+                					{
+                						"id": "1.1.2",
+                						"name": "room102",
+                						"area": 15.2,
+                						"cube": 30.4,
+                						"heating": 14.2,
+                						"light": 16
+                					}
+                				]
+                			},
+                			{
+                				"id": "1.2",
+                				"name": "floor2",
+                				"rooms": [{
+                						"id": "1.2.1",
+                						"name": "room201",
+                						"area": 14.5,
+                						"cube": 29,
+                						"heating": 13.6,
+                						"light": 15.3
+                					},
+                					{
+                						"id": "1.2.2",
+                						"name": "room202",
+                						"area": 12.2,
+                						"cube": 24.4,
+                						"heating": 10.2,
+                						"light": 13
+                					}
+                				]
+                			}
+                		]
+                	}
+                ]
+                """;
+        assertEquals("One of room parameters is non positive.", buildingInfoController.createBuilding(json),
+                "Light per square works properly.");
+    }
+    @Test
+    void testNotPositiveHeating() {
+        String json = """
+                [
+                    {"lowLight": 1.056},
+                    {"highHeat": 0.4671},
+                	{
+                		"id": "1",
+                		"name": "building",
+                		"levels": [{
+                				"id": "1.1",
+                				"name": "floor1",
+                				"rooms": [{
+                						"id": "1.1.1",
+                						"name": "room101",
+                						"area": 14.2,
+                						"cube": 28.4,
+                						"heating": -13.2,
+                						"light": 15
+                					},
+                					{
+                						"id": "1.1.2",
+                						"name": "room102",
+                						"area": 15.2,
+                						"cube": 30.4,
+                						"heating": 14.2,
+                						"light": 16
+                					}
+                				]
+                			},
+                			{
+                				"id": "1.2",
+                				"name": "floor2",
+                				"rooms": [{
+                						"id": "1.2.1",
+                						"name": "room201",
+                						"area": 14.5,
+                						"cube": 29,
+                						"heating": 13.6,
+                						"light": 15.3
+                					},
+                					{
+                						"id": "1.2.2",
+                						"name": "room202",
+                						"area": 12.2,
+                						"cube": 24.4,
+                						"heating": 10.2,
+                						"light": 13
+                					}
+                				]
+                			}
+                		]
+                	}
+                ]
+                """;
+        assertEquals("One of room parameters is non positive.", buildingInfoController.createBuilding(json),
+                "Light per square works properly.");
+    }
+
+    @Test
+    void testNotPositiveLight() {
+        String json = """
+                [
+                    {"lowLight": 1.056},
+                    {"highHeat": 0.4671},
+                	{
+                		"id": "1",
+                		"name": "building",
+                		"levels": [{
+                				"id": "1.1",
+                				"name": "floor1",
+                				"rooms": [{
+                						"id": "1.1.1",
+                						"name": "room101",
+                						"area": 14.2,
+                						"cube": 28.4,
+                						"heating": 13.2,
+                						"light": -15
+                					},
+                					{
+                						"id": "1.1.2",
+                						"name": "room102",
+                						"area": 15.2,
+                						"cube": 30.4,
+                						"heating": 14.2,
+                						"light": 16
+                					}
+                				]
+                			},
+                			{
+                				"id": "1.2",
+                				"name": "floor2",
+                				"rooms": [{
+                						"id": "1.2.1",
+                						"name": "room201",
+                						"area": 14.5,
+                						"cube": 29,
+                						"heating": 13.6,
+                						"light": 15.3
+                					},
+                					{
+                						"id": "1.2.2",
+                						"name": "room202",
+                						"area": 12.2,
+                						"cube": 24.4,
+                						"heating": 10.2,
+                						"light": 13
+                					}
+                				]
+                			}
+                		]
+                	}
+                ]
+                """;
+        assertEquals("One of room parameters is non positive.", buildingInfoController.createBuilding(json),
+                "Light per square works properly.");
     }
 }

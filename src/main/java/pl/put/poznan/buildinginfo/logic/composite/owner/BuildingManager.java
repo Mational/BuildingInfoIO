@@ -51,6 +51,12 @@ public class BuildingManager {
             ArrayNode roomsArray = (ArrayNode)floorsArray.get(i).get("rooms");
 
             for(int j=0;j<roomsArray.size();j++) {
+                if(Float.parseFloat(String.valueOf(roomsArray.get(j).get("area"))) <= 0.0f ||
+                Float.parseFloat(String.valueOf(roomsArray.get(j).get("cube"))) <= 0.0f ||
+                Float.parseFloat(String.valueOf(roomsArray.get(j).get("heating"))) <= 0.0f ||
+                Float.parseFloat(String.valueOf(roomsArray.get(j).get("light"))) <= 0.0f) {
+                    throw new NumberFormatException("One of room parameters is non positive.");
+                }
                 rooms.add(new Room(
                         String.valueOf(roomsArray.get(j).get("id")),
                         String.valueOf(roomsArray.get(j).get("name")),

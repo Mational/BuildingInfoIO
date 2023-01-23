@@ -57,6 +57,8 @@ public class BuildingInfoController {
             return "You didn't give all of the parameters in json file";
         }catch(JsonProcessingException jpe) {
             return "Core dump!";
+        }catch(NumberFormatException nfe) {
+            return "One of room parameters is non positive.";
         }
     }
 
