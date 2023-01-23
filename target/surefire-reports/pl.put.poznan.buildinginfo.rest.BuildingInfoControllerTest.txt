@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: pl.put.poznan.buildinginfo.rest.BuildingInfoControllerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.219 s - in pl.put.poznan.buildinginfo.rest.BuildingInfoControllerTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.187 s - in pl.put.poznan.buildinginfo.rest.BuildingInfoControllerTest
