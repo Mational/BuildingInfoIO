@@ -7,8 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class BuildingInfoControllerTest {
 
     private BuildingInfoController buildingInfoController;
-    //private float lightParameter;
-    //private float heatParameter;
 
     @BeforeEach
     void setUp() {
@@ -71,7 +69,7 @@ class BuildingInfoControllerTest {
                 ]
                 """;
         assertEquals("Json has been loaded to composite.", buildingInfoController.createBuilding(json),
-                "Adding good json format works properly.");
+                "Adding good json format doesn't work properly.");
     }
 
     @Test
@@ -130,7 +128,7 @@ class BuildingInfoControllerTest {
                 ]
                 """;
         assertEquals("You gave invalid Json format.", buildingInfoController.createBuilding(json),
-                "Error of json format works properly.");
+                "Adding wrong json format doesn't work properly.");
     }
 
     @Test
@@ -188,11 +186,11 @@ class BuildingInfoControllerTest {
                 ]
                 """;
         assertEquals("You didn't give all of the parameters in json file", buildingInfoController.createBuilding(json),
-                "Checking of all parameters works properly.");
+                "Checking of all parameters doesn't work properly.");
     }
 
     @Test
-    void testConstrains() {
+    void testConstraints() {
         String json = """
                 [
                     {"lowLight": -1.056},
@@ -247,10 +245,10 @@ class BuildingInfoControllerTest {
                 ]
                 """;
         assertEquals("At least one parameter is negative which is not allowed", buildingInfoController.createBuilding(json),
-                "Checking not positive parameters works properly.");
+                "Checking non-positive parameters doesn't work properly.");
     }
     @Test
-    void testNotPositiveArea() {
+    void testNonPositiveArea() {
         String json = """
                 [
                     {"lowLight": 1.056},
@@ -305,11 +303,11 @@ class BuildingInfoControllerTest {
                 ]
                 """;
         assertEquals("One of room parameters is non positive.", buildingInfoController.createBuilding(json),
-                "Light per square works properly.");
+                "Area non-positive check doesn't work properly.");
     }
 
     @Test
-    void testNotPositiveCube() {
+    void testNonPositiveCube() {
         String json = """
                 [
                     {"lowLight": 1.056},
@@ -364,10 +362,10 @@ class BuildingInfoControllerTest {
                 ]
                 """;
         assertEquals("One of room parameters is non positive.", buildingInfoController.createBuilding(json),
-                "Light per square works properly.");
+                "Cube non-positive check doesn't work properly.");
     }
     @Test
-    void testNotPositiveHeating() {
+    void testNonPositiveHeating() {
         String json = """
                 [
                     {"lowLight": 1.056},
@@ -422,11 +420,11 @@ class BuildingInfoControllerTest {
                 ]
                 """;
         assertEquals("One of room parameters is non positive.", buildingInfoController.createBuilding(json),
-                "Light per square works properly.");
+                "Heating non-positive check doesn't work properly.");
     }
 
     @Test
-    void testNotPositiveLight() {
+    void testNonPositiveLight() {
         String json = """
                 [
                     {"lowLight": 1.056},
@@ -481,6 +479,6 @@ class BuildingInfoControllerTest {
                 ]
                 """;
         assertEquals("One of room parameters is non positive.", buildingInfoController.createBuilding(json),
-                "Light per square works properly.");
+                "Light non-positive check doesn't work properly.");
     }
 }

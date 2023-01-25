@@ -15,13 +15,13 @@ class RoomTest {
     @Test
     void getLightPerSquare() {
         assertEquals(1.0563380718231201, room.getLightPerSquare(),
-                "Light per square works properly.");
+                "Light per square doesn't work properly.");
     }
 
     @Test
     void getHeatingPerCube() {
         assertEquals(0.4647887349128723, room.getHeatingPerCube(),
-                "Light per square works properly.");
+                "Heating per cube doesn't work properly.");
     }
 
 }
