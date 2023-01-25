@@ -1,8 +1,7 @@
-F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\rest\TextTransformerController.java
-F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\logic\kompozyt\owner\BuildingManager.java
-F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\logic\kompozyt\lokalizacje\Room.java
-F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\logic\TextTransformer.java
-F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\logic\kompozyt\lokalizacje\BaseLocation.java
-F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\logic\kompozyt\lokalizacje\CompoundLocation.java
-F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\logic\kompozyt\lokalizacje\Location.java
-F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\app\TextTransformerApplication.java
+F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\logic\composite\locations\Location.java
+F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\rest\BuildingInfoController.java
+F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\app\BuildingInfoApplication.java
+F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\logic\composite\locations\BaseLocation.java
+F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\logic\composite\locations\CompoundLocation.java
+F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\logic\composite\locations\Room.java
+F:\Programowanie\Java\BuildingInfoIO\src\main\java\pl\put\poznan\buildinginfo\logic\composite\owner\BuildingManager.java

@@ -1,7 +1,7 @@
-pl/put/poznan/buildinginfo/logic/composite/locations/Location.class
-pl/put/poznan/buildinginfo/rest/BuildingInfoController.class
-pl/put/poznan/buildinginfo/app/BuildingInfoApplication.class
-pl/put/poznan/buildinginfo/logic/composite/owner/BuildingManager.class
-pl/put/poznan/buildinginfo/logic/composite/locations/Room.class
-pl/put/poznan/buildinginfo/logic/composite/locations/CompoundLocation.class
-pl/put/poznan/buildinginfo/logic/composite/locations/BaseLocation.class
+pl\put\poznan\buildinginfo\logic\composite\locations\BaseLocation.class
+pl\put\poznan\buildinginfo\logic\composite\owner\BuildingManager.class
+pl\put\poznan\buildinginfo\app\BuildingInfoApplication.class
+pl\put\poznan\buildinginfo\logic\composite\locations\CompoundLocation.class
+pl\put\poznan\buildinginfo\rest\BuildingInfoController.class
+pl\put\poznan\buildinginfo\logic\composite\locations\Room.class
+pl\put\poznan\buildinginfo\logic\composite\locations\Location.class

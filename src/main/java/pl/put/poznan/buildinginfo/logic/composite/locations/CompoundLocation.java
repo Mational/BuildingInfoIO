@@ -77,6 +77,9 @@ public class CompoundLocation extends BaseLocation {
         for(Location child : children) {
             overallArea += child.getArea();
         }
+        overallArea *= 100;
+        overallArea = Math.round(overallArea);
+        overallArea /= 100;
         return overallArea;
     }
 
@@ -95,6 +98,9 @@ public class CompoundLocation extends BaseLocation {
         for(Location child : children) {
             overallCube += child.getCube();
         }
+        overallCube *= 100;
+        overallCube = Math.round(overallCube);
+        overallCube /= 100;
         return overallCube;
     }
 
@@ -113,6 +119,9 @@ public class CompoundLocation extends BaseLocation {
         for(Location child : children) {
             overallHeating += child.getHeating();
         }
+        overallHeating *= 100;
+        overallHeating = Math.round(overallHeating);
+        overallHeating /= 100;
         return overallHeating;
     }
 
@@ -131,6 +140,9 @@ public class CompoundLocation extends BaseLocation {
         for(Location child : children) {
             overallLight += child.getLight();
         }
+        overallLight *= 100;
+        overallLight = Math.round(overallLight);
+        overallLight /= 100;
         return overallLight;
     }
 
